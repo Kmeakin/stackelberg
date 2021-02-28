@@ -1,5 +1,7 @@
 import java.rmi.NotBoundException;
 import java.rmi.RemoteException;
+import comp34120.ex2.PlayerImpl;
+import comp34120.ex2.PlayerType;
 
 public class Leader extends PlayerImpl {
     protected Leader() throws RemoteException, NotBoundException {

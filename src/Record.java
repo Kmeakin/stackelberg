@@ -18,9 +18,14 @@ public final class Record implements Serializable {
 	public final float m_cost;
 
 	Record(final int p_date, final float p_leaderPrice, final float p_followerPrice, final float p_cost) {
-		m_date = p_date;
-		m_leaderPrice = p_leaderPrice;
-		m_followerPrice = p_followerPrice;
-		m_cost = p_cost;
+		this.m_date = p_date;
+		this.m_leaderPrice = p_leaderPrice;
+		this.m_followerPrice = p_followerPrice;
+		this.m_cost = p_cost;
+	}
+
+	public String toString() {
+		return String.format("{date: %d, leader_price: %f, follower_price: %f, cost: %f}", this.m_date,
+				this.m_leaderPrice, this.m_followerPrice, this.m_cost);
 	}
 }

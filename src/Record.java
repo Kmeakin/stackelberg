@@ -23,9 +23,4 @@ public final class Record implements Serializable {
 		this.m_followerPrice = p_followerPrice;
 		this.m_cost = p_cost;
 	}
-
-	public String toString() {
-		return String.format("{date: %d, leader_price: %f, follower_price: %f, cost: %f}", this.m_date,
-				this.m_leaderPrice, this.m_followerPrice, this.m_cost);
-	}
 }

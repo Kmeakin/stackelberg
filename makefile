@@ -5,11 +5,11 @@ kill:
 	killall -q -9 rmiregistry || true
 	killall -q -9 java 		  || true
 
-run: build 
+run: kill build
 	rmiregistry &
 	sleep 1
 	java -classpath poi-3.7-20101029.jar: -Djava.rmi.server.hostname=127.0.0.1 comp34120.ex2.Main &
-	sleep 1
+	sleep 2
 	java -classpath .:src -Djava.rmi.server.hostname=127.0.0.1 Leader
 
 clean: 
